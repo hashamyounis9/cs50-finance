@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-centre">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+                <th class="text-centre">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for share in record_of_current_user %}
+                <tr>
+                    <td class="text-centre">{{ share["symbol"] }}</td>
+                    <td class="text-end">{{ share["SUM(shares)"] }}</td>
+                    <td class="text-end">{{ share["currentprice"] | usd }}</td>
+                    <td class="text-end">{{ share["totalprice"] | usd }}</td>
+                    <td>
+                        <form style="display: inline-block;" action="/buy" method="get">
+                            <input type="hidden" name="symbol" value="{{ share["symbol"] }}">
+                            <button class="btn btn-primary" type="submit">Buy</button>
+                        </form>
+                        <form style="display: inline-block;" action="/sell" method="get">
+                            <input type="hidden" name="symbol" value="{{ share["symbol"] }}">
+                            <button class="btn btn-primary" type="submit">Sell</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+                <td class="border-0 text-end">{{ cash[0]["cash"] | usd }}</td>
+                <td rowspan="2">
+                    <form style="display: inline-block;" action="/addcash" method="get">
+                        <button class="btn btn-primary" type="submit">Add Cash</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
+                <td class="border-0 w-bold text-end">{{ (cash[0]["cash"] + current_worth )| usd}} </td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

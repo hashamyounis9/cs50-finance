@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table tablestriped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the database entries to display them in this table -->
+            {% for share in record_of_current_user %}
+                <tr>
+                    <td class="text-start">{{ share["symbol"] }}</td>
+                    <td class="text-end">{{   share["shares"] }}</td>
+                    <td class="text-end">{{   share["price"] | usd}}</td>
+                    <td class="text-end">{{   share["time"] }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+{% endblock %}
