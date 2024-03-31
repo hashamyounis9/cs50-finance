@@ -48,8 +48,8 @@ Usage
 Register: Create a new account to start tracking your portfolio.
 View Portfolio: The homepage displays your owned stocks, number of shares, current price, and total value for each holding.
 <p>
-* Register: Create a new account to start tracking your portfolio.
-* View Portfolio: The homepage displays your owned stocks, number of shares, current price, and total value for each holding.
+# Register: Create a new account to start tracking your portfolio.
+View Portfolio: The homepage displays your owned stocks, number of shares, current price, and total value for each holding.
 It also shows your remaining cash balance and the total portfolio value.
 Search Stocks: Enter a stock symbol to look up its current price.
 Buy/Sell Stocks: Use the provided form to simulate buying or selling shares of a stock.
