@@ -57,7 +57,6 @@ The code utilizes error handling and user input validation for a robust user exp
 Contributing
 Feel free to fork this repository and contribute your improvements!
 
-Happy coding!
 * Search Stocks: Enter a stock symbol to look up its current price.
 * Buy/Sell Stocks: Use the provided form to simulate buying or selling shares of a stock.
 </p>
