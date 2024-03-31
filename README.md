@@ -27,7 +27,7 @@
 
 <ol>
 <li>Clone this repository:</li>
-<pre><code>git clone [invalid URL removed]</code></pre>
+<pre><code>git clone https://github.com/hashamyounis9/cs50-finance.git</code></pre>
 <li>Install dependencies:</li>
 <pre><code>python3 -m venv .venv<br>source .venv/bin/activate<br>pip install -r requirements.txt</code></pre>
 <li>Configure API Key:
