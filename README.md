@@ -1,7 +1,7 @@
-# cs50x-2024-pset9-finance
+<h1>CS50 Finance: A Stock Portfolio Tracker</h1>
 ![My Finance 2024](screenshot/my_finance_2024.png)
 
-<h1>CS50 Finance: A Stock Portfolio Tracker</h1>
+
 
 <p>This repository contains the code for CS50's Finance problem set, a web application for managing a simulated stock portfolio. Users can track their holdings, view real-time stock prices, and buy/sell stocks (without real-money transactions).</p>
 
